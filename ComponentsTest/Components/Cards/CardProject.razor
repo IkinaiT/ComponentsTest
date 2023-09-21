@@ -1,0 +1,28 @@
+﻿@inject NavigationManager _navManager;
+
+@using ComponentsTest.Components.Buttons
+
+<div class="main_wrapper">
+    <div class="top">
+        <statusLabel>Активный</statusLabel>
+    </div>
+    <div class="bottom">
+        <h1>111111111111</h1>
+        <div class="labelsLine">
+            <LabelTest Current="@Current" Max="@Max" Content="@($"{Current}/{Max} баллов")"></LabelTest>
+            <LabelTest Current="@Current" Max="@Max" Content="@($"{Current}/{Max} баллов")"></LabelTest>
+            <LabelTest Current="@Current" Max="@Max" Content="@($"{Current}/{Max} баллов")"></LabelTest>
+        </div>
+        <Button_3 lable="Открыть" style="overflow:clip; max-width: 100%" OnCklick="@Click"/>
+    </div>
+</div>
+
+@code {
+    double Max = 100;
+    double Current = 0;
+
+    void Click()
+    {
+        Current = Current == Max ? 0 : ++Current;
+    }
+}

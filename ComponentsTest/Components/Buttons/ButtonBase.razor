@@ -1,0 +1,12 @@
+﻿<div @attributes="@CapturedAttributes" @onclick="@OnCklick">
+    @lable
+</div>
+
+@code {
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> CapturedAttributes { get; set; }
+    [Parameter]
+    public string lable { get; set; } = "";
+    [Parameter]
+    public EventCallback OnCklick { get; set; }
+}

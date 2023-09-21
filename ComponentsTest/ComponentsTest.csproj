@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Component.razor.css" />
+    <None Remove="Components\Component.razor.css" />
+    <None Remove="Components\LabelTest.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Component.razor.css" />
+    <Content Include="Components\LabelTest.razor.css" />
+  </ItemGroup>
+
+</Project>

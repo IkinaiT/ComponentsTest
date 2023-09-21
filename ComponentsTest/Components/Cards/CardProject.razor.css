@@ -1,0 +1,92 @@
+﻿html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.main_wrapper {
+    display: flex;
+    width: 500px;
+    height: 382px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 15px 17px;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05), 0px -1px 20px 0px rgba(0, 0, 0, 0.05);
+    padding: var(--space-250, 20px) var(--space-250, 20px) 0px var(--space-250, 20px);
+}
+
+.top {
+    height: 48%;
+    width: 460px;
+    gap: 10px;
+    flex-shrink: 0;
+    align-items: flex-start;
+    background-size: cover;
+    border-radius: 30px;
+    background-image: url(https://s3-alpha-sig.figma.com/img/d8d7/98d1/accc904b84ce67c2b2db4ac1d9cd6990?Expires=1695600000&Signature=SWr~2wh~3-9hht75e2Wf23HJa8kRwyhyVMt3yEhZ0zjokGQjVsEW5MjN0o8BucJMeEj-AI4MPk09ryOVlXAaiF0byraamXDCoLveE1J85EiShuIP2FmrMkDzabT~RP8kp-MAsmJExFdGLtdHifd0tAcUJvBX2kwSkPnhOKGmVaYBbhmGPlNc5UR7Tzxaat4UQfIwkfCBgFvlQK~Z1WpXN1TrBMkSVCW0Y6bNk87hp3Jy3ZZgGIQtd-5ugSMxOwwZqTk~i04QiSlF1mAKWvTP7V6mU19Se2A2OiR2vjRHKnyL2KWDhA6bciEV-YyiAbAsVNVFyFy5UGY-dC9tZAsW-g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+}
+
+.bottom {
+    height: calc(48% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-250, 20px);
+    overflow: clip;
+}
+
+.labelsLine {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+}
+
+statusLabel {
+    display: flex;
+    height: 34px;
+    padding: 2px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    margin-left: 14px;
+    margin-top: 15px;
+    border-radius: 60px;
+    background: var(--Second-Colour, #F59F00);
+    color: var(--Text-White, #FFF);
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    user-select: none;
+    overflow: clip;
+    max-width: 100px;
+}
+
+h1 {
+    color: #000;
+    margin: 0;
+    font-family: 'Montserrat-SemiBold';
+    font-size: 28px;
+    user-select: none;
+}
+
+infoLabel {
+    display: flex;
+    height: 34px;
+    padding: 2px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 60px;
+    background: rgba(45, 45, 45, 0.10);
+    color: var(--Text-Dark, #2D2D2D);
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    user-select: none;
+    max-width: 142px;
+    min-width: 93px;
+    overflow:clip;
+}

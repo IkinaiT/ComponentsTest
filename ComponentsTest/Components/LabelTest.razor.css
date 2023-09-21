@@ -1,0 +1,67 @@
+﻿.parent {
+    position: relative;
+    height: 34px;
+    background-color: #eaeaea;
+    place-content: center;
+    text-align: center;
+    justify-content: center;
+    vertical-align: central;
+    display: inline-block;
+    border-radius: 60px;
+    border: 3px solid #00ff90;
+    min-width: 120px;
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.raz {
+    --borderW: 4px;
+    position: absolute;
+    /* текст по центру */
+    display: block;
+    place-content: center;
+    margin-left: -3px;
+    margin-top: -3px;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    border: var(--borderW) solid #eaeaea;
+    border-radius: 60px;
+    user-select: none; /* запретить выделение текста */
+    box-sizing: border-box; /* рамка входит в ширину/высоту */
+}
+
+    .raz::before {
+        content: "";
+        position: absolute;
+        inset: calc(-1*var(--borderW));
+        border: var(--borderW) solid #eaeaea;
+        border-radius: 60px;
+        /*animation: polygon 10s linear infinite;*/
+    }
+
+/*@keyframes polygon {
+    0% {
+        clip-path: polygon(50% 50%, 50% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%, 50% 0%);
+    }
+
+    17.1875% {
+        clip-path: polygon(50% 50%, 50% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%, 100% 0%);
+    }
+
+    32.8125% {
+        clip-path: polygon(50% 50%, 50% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 100%, 100% 100%);
+    }
+
+    67.1875% {
+        clip-path: polygon(50% 50%, 50% 0%, 0% 0%, 0% 100%, 0% 100%, 0% 100%, 0% 100%);
+    }
+
+    82.8125% {
+        clip-path: polygon(50% 50%, 50% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%);
+    }
+
+    100% {
+        clip-path: polygon(50% 50%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+    }
+}*/

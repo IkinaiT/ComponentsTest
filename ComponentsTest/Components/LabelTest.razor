@@ -1,0 +1,55 @@
+﻿
+    <div class="parent">
+        <div class="raz" style="clip-path:@Clip()">
+        </div>
+        @Content
+    </div>
+
+@code {
+    [Parameter]
+    public double Max { get; set; } = 100;
+    [Parameter]
+    public double Current { get; set; } = 0;
+    [Parameter]
+    public string Content { get; set; } = "undefined";
+
+
+    double part = 50;
+
+    string Clip()
+    {
+        string s = "";
+
+        double percent = (Current / Max) * 100;
+
+        if (percent >= 0 && percent <= 17.1875)
+        {
+            s = $"polygon(50% 50%, 50% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%," + Convert(percent, 0, 17.1875, 50, 100).ToString().Replace(',', '.') + "% 0%)";
+        }
+        else if (percent >= 17.1875 && percent <= 32.8125)
+        {
+            s = $"polygon(50% 50%, 50% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%, 100% {Convert(percent, 17.1875, 32.8125, 0, 100).ToString().Replace(',','.')}%)";
+        }
+        else if (percent >= 32.8125 && percent <= 67.1875)
+        {
+
+            s = $"polygon(50% 50%, 50% 0%, 0% 0%, 0% 100%, {Convert(percent, 32.8125, 67.1875, 100, 0).ToString().Replace(',', '.')}% 100%, {Convert(percent, 32.8125, 67.1875, 100, 0).ToString().Replace(',', '.')}% 100%, {Convert(percent, 32.8125, 67.1875, 100, 0).ToString().Replace(',', '.')}% 100%)";
+        }
+        else if (percent >= 67.1875 && percent <= 82.8125)
+        {
+
+            s = $"polygon(50% 50%, 50% 0%, 0% 0%, 0% {Convert(percent, 67.1875, 82.8125, 100, 0).ToString().Replace(',', '.')}%, 0% {Convert(percent, 67.1875, 82.8125, 100, 0).ToString().Replace(',', '.')}%, 0% {Convert(percent, 67.1875, 82.8125, 100, 0).ToString().Replace(',', '.')}%, 0% {Convert(percent, 67.1875, 82.8125, 100, 0).ToString().Replace(',', '.')}%)";
+        }
+        else if (percent >= 82.8125 && percent <= 100)
+        {
+
+            s = $"polygon(50% 50%, 50% 0%, {Convert(percent, 82.8125, 100, 0, 50).ToString().Replace(',', '.')}% 0%, {Convert(percent, 82.8125, 100, 0, 50).ToString().Replace(',', '.')}% 0%, {Convert(percent, 82.8125, 100, 0, 50).ToString().Replace(',', '.')}% 0%, {Convert(percent, 82.8125, 100, 0, 50).ToString().Replace(',', '.')}% 0%, {Convert(percent, 82.8125, 100, 0, 50).ToString().Replace(',', '.')}% 0%)";
+        }
+        return s;
+    }
+
+    double Convert(double value, double From1, double From2, double To1, double To2){
+        double d = (value - From1) / (From2 - From1) * (To2 - To1) + To1;
+        return d;
+    }
+}
