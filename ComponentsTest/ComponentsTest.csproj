@@ -8,12 +8,14 @@
 
   <ItemGroup>
     <None Remove="Component.razor.css" />
+    <None Remove="Components\CircleBar.razor.css" />
     <None Remove="Components\Component.razor.css" />
     <None Remove="Components\LabelTest.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Component.razor.css" />
+    <Content Include="Components\CircleBar.razor.css" />
     <Content Include="Components\LabelTest.razor.css" />
   </ItemGroup>
 
